@@ -1,0 +1,122 @@
+{% load static %}
+
+
+<body>
+  {% include "basic/navbar-dark.html" %}
+
+  <!-- Omnisearch -->
+  
+  <div class="main-content">
+    <section class="slice bg-gradient-primary pb-250" data-offset-top="#header-main">
+      <!-- SVG background -->
+      <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
+        <figure class="w-100 d-none d-lg-block">
+          <img alt="Image placeholder" src="{% static 'assets/img/svg/backgrounds/bg-3.svg' %}" class="svg-inject">
+        </figure>
+      </div>
+      <div class="container py-5 pt-lg-6 position-relative zindex-100">
+        <div class="row">
+          <div class="col-lg-5">
+            <h1 class="text-white">Have a project in mind?</h1>
+            <p class="lead text-white mt-4">We put all the experience and know-how in this product so we can offer you the best product we have ever built.</p>
+            <a href="#sct_contact_form" class="btn btn-secondary rounded-pill btn-icon hover-translate-y-n3 mt-4" data-scroll-to data-scroll-to-offset="140">
+              <span class="btn-inner--icon"><i class="fas fa-pencil-alt"></i></span>
+              <span class="btn-inner--text">Write a message</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slice slice-lg pt-lg-5">
+      <div class="container position-relative zindex-100">
+        <div class="row mt--200">
+          <div class="col-lg-6">
+            <div class="card bg-primary opacity-container text-white overflow-hidden shadow border-0">
+                <div class="card-img-bg" style="background-image: url({% static 'assets/img/theme/light/city-1.jpg' %});"></div>
+                <span class="mask bg-gradient-primary opacity-9 opacity-8--hover"></span>
+                <div class="card-body px-5 py-5">
+                  <div style="min-height: 250px;">
+                    <h2 class="h2 text-white font-weight-bold mb-4">United Kingdom</h2>
+                    <h5 class="text-white mt-4 mb-2">E: office@danywebdesign.co.uk</h5>
+                    <h5 class="text-white">T: 0772.927.6285</h5>
+                  </div>
+                  <span class="text-white text-uppercase font-weight-bold">
+                    <i class="fas fa-angle-right ml-2"></i>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card bg-dark opacity-container text-white overflow-hidden shadow border-0">
+                <div class="card-img-bg" style="background-image: url({% static 'assets/img/theme/light/city-2.jpg' %});"></div>
+                <span class="mask bg-gradient-dark opacity-9 opacity-8--hover"></span>
+                <div class="card-body px-5 py-5">
+                  <div style="min-height: 250px;">
+                    <h2 class="h2 text-white font-weight-bold mb-4">Poland</h2>
+                    <h5 class="text-white mt-4 mb-2">E: biuro@TGwebsite.com</h5>
+                    <h5 class="text-white">T: 514.583.389</h5>
+                  </div>
+                  <span class="text-white text-uppercase font-weight-bold">
+                    <i class="fas fa-angle-right ml-2"></i>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sct_contact_form" class="slice slice-lg" data-delimiter-before="1">
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-lg-6">
+            <h3>Contact us</h3>
+            <p class="lead">If there's something we can help you with, jut let us know. We'll be more than happy to offer you our help</p>
+            <form class="mt-5">
+              <form action="/your-name/" method="post">
+                <label for="your_name">Your name: </label>
+                <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+                <input type="submit" value="OK">
+            </form>
+              <div class="form-group">
+                <label class="sr-only">Your name</label>
+                <input class="form-control form-control-lg" placeholder="Your name" type="text">
+              </div>
+              <div class="form-group">
+                <label class="sr-only">Email address</label>
+                <input class="form-control form-control-lg" placeholder="Email address" type="text">
+              </div>
+              <div class="form-group">
+                <label class="sr-only">Type your message</label>
+                <textarea class="form-control form-control-lg textarea-autosize" rows="5" placeholder="Type your message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark rounded-pill mt-4">Send message</button>
+            </form>
+          </div>
+          <div class="col-lg-5 ml-lg-auto">
+            <h3>3 Hesketh Road,
+              <br>PR2 6NS Preston </h3>
+            <p class="lead my-4">E: <a href="#">office@dannywebdesign.co.uk</a><br>T: 0772.927.6285</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call to action (v5) -->
+    
+  </div>
+  
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="{% static 'assets/js/purpose.core.js'%}"></script>
+  <!-- Page JS -->
+  <script src="{% static 'assets/libs/autosize/dist/autosize.min.js'%}"></script>
+  <script src="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js'%}"></script>
+  <!-- Purpose JS -->
+  <script src="{% static 'assets/js/purpose.js'%}"></script>
+  <!-- Demo JS - remove it when starting your project -->
+  <script src="{% static 'assets/js/demo.js'%}"></script>
+</body>
+{% include "basic/footer.html" %}
+
+</html>

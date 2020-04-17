@@ -1,6 +1,10 @@
 from django.shortcuts import render
-from .models import Category, Product
+from .models import Category, Product, Portfolio
 from django.shortcuts import get_object_or_404
+from .forms import ContactForm
+from django.core.mail import send_mail, BadHeaderError
+from .forms import NameForm
+from django.http import HttpResponseRedirect
 
 def home(request):
     #tak tworzysz zapytania bazy danych Product.objects.filte ( w filter podajesz jak chchesz odflitrowac)
@@ -25,3 +29,30 @@ def single_product(request, id):
     #tam za pomoca template tags obrabiasz go i wyswietlasz sobie dowoli
     context = {'object': single_product,}
     return render(request, 'app/shop-product.html', context)
+
+
+def services(request):
+    return render(request, 'app/services.html', {})
+
+def portfolio(request):
+    port = Portfolio.objects.all()
+    context = {'obj': port,}
+    return render(request, 'app/portfolio.html', context)
+
+def get_name(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = NameForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            return HttpResponseRedirect('/thanks/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = NameForm()
+
+    return render(request, 'app/contact.html', {'form': form})

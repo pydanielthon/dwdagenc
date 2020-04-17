@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, Portfolio
 
 #pnizsze linie kodu umozliwa kopiowanie obiektow
 #bardzo pytdadne do testow
@@ -12,6 +12,8 @@ duplicate.short_description = "Copy select element"
 
 class AdminProject(admin.ModelAdmin):
     actions = [duplicate]
+
+admin.site.register(Portfolio)
 
 admin.site.register(Category)
 admin.site.register(Product, AdminProject)

@@ -1,0 +1,105 @@
+{% load static %}
+
+
+
+<body>
+  {% include "basic/navbar-dark.html" %}
+
+  <div class="main-content">
+    <!-- Header (v10) -->
+    <section class="slice slice-xl bg-gradient-primary" style="padding-bottom: 150px;">
+      <!-- SVG background -->
+      <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
+        <figure class="w-100 d-none d-lg-block">
+          <img alt="Image placeholder" src="{% static 'assets/img/svg/backgrounds/bg-4.svg' %}" class="svg-inject">
+        </figure>
+      </div>
+      <div class="container position-relative zindex-100 pt-7">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-6 py-lg-9">
+            <h1 class="text-white mb-4 lh-110">Every day we create new solutions for our customers.</h1>
+            <div class="row">
+              <div class="col-lg-10">
+                <p class="lead text-white lh-180">We love to create web components and themes that look attractive and work effectively on any platform.</p>
+              </div>
+            </div>
+            <a href="#port" class="btn btn-white btn-icon rounded-pill mt-5">
+              <span class="btn-inner--icon"><i class="fas fa-fire"></i></span>
+              <span class="btn-inner--text">See our projects</span>
+            </a>
+          </div>
+          <div class="col-xl-4 col-lg-5 offset-lg-1 d-none d-lg-block">
+            <div class="hover-scale-110">
+              <img alt="Image placeholder" src="{% static 'assets/img/theme/light/mobile-6.jpg' %}" class="img-fluid img-center rounded shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shape-container" data-shape-position="bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 1000 300" style="enable-background:new 0 0 1000 300;" xml:space="preserve" class="ie-shape-wave-1 fill-primary">
+          <path d="M 0 246.131 C 0 246.131 31.631 250.035 47.487 249.429 C 65.149 248.755 82.784 245.945 99.944 241.732 C 184.214 221.045 222.601 171.885 309.221 166.413 C 369.892 162.581 514.918 201.709 573.164 201.709 C 714.375 201.709 772.023 48.574 910.547 21.276 C 939.811 15.509 1000 24.025 1000 24.025 L 1000 300.559 L -0.002 300.559 L 0 246.131 Z" />
+        </svg>
+      </div>
+    </section>
+    <!-- Features (v22) -->
+    
+    <!-- Features (v23) -->
+
+    <!-- Projects (v1) -->
+    <section class="slice slice-lg" id="port">
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h3 class=" mt-4">Our projects 
+
+          </h3>
+          <div class="fluid-paragraph mt-3">
+            <p class="lead lh-180">Always looking for better ways to do things, innovate and help people achieve their goals.</p>
+          </div>
+        </div>
+        <div class="row">
+          
+          {% for abc in obj %}
+          <div class="col-lg-6">
+            <div class="card hover-shadow-lg hover-translate-y-n10">
+              <div class="card-image p-0">
+                <img alt="Image placeholder" src="{{ abc.img.url }}" class="card-img">
+              </div>
+              <span class="mask bg-dark opacity-3"></span>
+              <span class="mask hover-mask bg-gradient-primary opacity-4"></span>
+              <div class="card-img-overlay d-flex flex-column">
+                <div class="col pt-2">
+                  <h3 class="text-capitalize mb-1">
+                    <a href="#" class="text-white">Beautiful colors from nature</a>
+                  </h3>
+                  <h6 class="text-white">
+                    <a href="{{ abc.url }}" class="text-white border-bottom border-white">Live Preview</a>
+                  </h6>
+                </div>
+                <div class="w-100 mt-auto text-right">
+                  <span class="text-white font-weight-bold">May 31, 2019</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    
+        <div class="text-center mt-5">
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Call to action (v5) -->
+    
+  </div>
+ 
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="{% static 'assets/js/purpose.core.js' %}"></script>
+  <!-- Purpose JS -->
+  <script src="{% static 'assets/js/purpose.js' %}"></script>
+  <!-- Demo JS - remove it when starting your project -->
+  <script src="{% static 'assets/js/demo.js' %}"></script>
+</body>
+{% include "basic/footer.html" %}
+
+</html>
