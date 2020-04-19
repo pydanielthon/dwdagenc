@@ -123,3 +123,9 @@ STATIC_ROOT = 'shop-app/app_rama/app/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'app/media')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'czerepak183@gmail.com'
+EMAIL_HOST_PASSWORD = 'crisek12'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

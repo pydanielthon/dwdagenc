@@ -11,7 +11,7 @@
       <!-- SVG background -->
       <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
         <figure class="w-100 d-none d-lg-block">
-          <img alt="Image placeholder" src="{% static 'assets/img/svg/backgrounds/bg-4.svg' %}" class="svg-inject">
+          <img alt="Image placeholder" src="{% static 'assets/img/theme/light/bg-4.svg' %}" class="svg-inject">
         </figure>
       </div>
       <div class="container position-relative zindex-100 pt-7">
@@ -30,7 +30,7 @@
           </div>
           <div class="col-xl-4 col-lg-5 offset-lg-1 d-none d-lg-block">
             <div class="hover-scale-110">
-              <img alt="Image placeholder" src="{% static 'assets/img/theme/light/mobile-6.jpg' %}" class="img-fluid img-center rounded shadow-lg">
+              <img alt="Image placeholder" src="{% static 'assets/img/theme/light/portfolio.png' %}" class="img-fluid img-center rounded shadow-lg">
             </div>
           </div>
         </div>
@@ -69,14 +69,14 @@
               <div class="card-img-overlay d-flex flex-column">
                 <div class="col pt-2">
                   <h3 class="text-capitalize mb-1">
-                    <a href="#" class="text-white">Beautiful colors from nature</a>
+                    <a href="#" class="text-white">{{ abc.name }}</a>
                   </h3>
                   <h6 class="text-white">
                     <a href="{{ abc.url }}" class="text-white border-bottom border-white">Live Preview</a>
                   </h6>
                 </div>
                 <div class="w-100 mt-auto text-right">
-                  <span class="text-white font-weight-bold">May 31, 2019</span>
+                  <span class="text-white font-weight-bold">{{ abc.typee }}</span>
                 </div>
               </div>
             </div>
